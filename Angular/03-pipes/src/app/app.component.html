@@ -1,0 +1,114 @@
+<div class="container-fluid">
+    <h1>Pipes</h1>
+    <hr>
+    <h4>Documentación oficial sobre PIPES <span class="badge badge-secondary">https://angular.io/guide/pipes</span></h4>
+    <br><br>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Variable</th>
+                <th scope="col">Pipes</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> {{nombre}} </td>
+                <td> uppercase </td>
+                <td> {{nombre | uppercase}} </td>
+                <td> Coloca todas las letras en mayúscula </td>
+            </tr>
+            <tr>
+                <td> {{nombre}} </td>
+                <td> lowercase </td>
+                <td> {{nombre | lowercase}} </td>
+                <td> Coloca todas las letras en minúsculas </td>
+            </tr>
+            <tr>
+                <td> {{nombre}} </td>
+                <td> slice:3 </td>
+                <td> {{nombre | slice:3}} </td>
+                <td> Quita las 3 primeras letras</td>
+            </tr>
+            <tr>
+                <td> {{nombre}} </td>
+                <td> slice:0:3 </td>
+                <td> {{nombre | slice:0:3}} </td>
+                <td> Te permite establecer un limite para no quitar letras </td>
+            </tr>
+            <tr>
+                <td> {{PI}} </td>
+                <td> number </td>
+                <td> {{PI | number}} </td>
+                <td> Controla por defecto la cantidad de números </td>
+            </tr>
+            <tr>
+                <td> {{PI}} </td>
+                <td> number:'3.1-5' </td>
+                <td> {{PI | number:'3.1-2'}} </td>
+                <td> Controla la cantidad de números ha mostrar despues del decimal </td>
+            </tr>
+            <tr>
+                <td> {{porc}} </td>
+                <td> percent </td>
+                <td> {{porc | percent}} </td>
+                <td> Cambia el valor numerico en porcentaje </td>
+            </tr>
+            <tr>
+                <td> {{porc}} </td>
+                <td> percent:'2.1-3' </td>
+                <td> {{porc | percent:'2.1-2'}} </td>
+                <td> Te permite controlar los caracteres para mostrar</td>
+            </tr>
+            <tr>
+                <td> {{salario}} </td>
+                <td> currency </td>
+                <td> {{salario | currency}} </td>
+                <td> Valor de moneda</td>
+            </tr>
+            <tr>
+                <td> {{salario}} </td>
+                <td> currency:'EUR':true </td>
+                <td> {{salario | currency:'EUR':true}} </td>
+                <td> Simbolo de moneda</td>
+            </tr>
+            <tr>
+                <td> {{salario}} </td>
+                <td> currency:'EUR':true:'2.0-3' </td>
+                <td> {{salario | currency:'EUR':true:'2.0-3'}} </td>
+                <td> Controlar formato de moneda</td>
+            </tr>
+            <tr>
+                <td> {{valorDePromesa}} </td>
+                <td> Async </td>
+                <td> {{valorDePromesa | async}} </td>
+                <td> Te permite leer los datos traidos por una promesa </td>
+            </tr>
+            <tr>
+                <td> {{fecha}} </td>
+                <td> date </td>
+                <td> {{fecha | date}} </td>
+                <td> Nos permite ver en formato fecha </td>
+            </tr>
+            <tr>
+                <td> {{fecha}} </td>
+                <td> date:'medium' </td>
+                <td> {{fecha | date:'medium'}} </td>
+                <td> Controlamos el formato de la fecha </td>
+            </tr>
+            <tr>
+                <td> {{fecha}} </td>
+                <td> date:'MMMM - dd' </td>
+                <td> {{fecha | date:'MMMM - dd'}} </td>
+                <td> Controlamos el formato de la fecha </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <h3>JSON: <span class="badge badge-secondary">Ejemplo</span></h3>
+    <pre> <!-- te permite ver el json de una mejor manera -->
+    {{heroe | json}}
+    </pre>
+
+</div>
