@@ -103,6 +103,12 @@
                 <td> {{fecha | date:'MMMM - dd'}} </td>
                 <td> Controlamos el formato de la fecha </td>
             </tr>
+            <tr>
+                <td> Contrasena: {{activar}} </td>
+                <td> <button (click)="activar = !activar" type="button" class="btn btn-outline-dark">Activar/Desactivar</button></td>
+                <td> {{nombre | contrasena:activar}} </td>
+                <td> Pipe Personalizado con un evento </td>
+            </tr>
         </tbody>
     </table>
     <br><br>
@@ -110,5 +116,9 @@
     <pre> <!-- te permite ver el json de una mejor manera -->
     {{heroe | json}}
     </pre>
-
+    <br><br>
+    <h3>Youtube <small>Video</small></h3>
+    <hr>
+    <!-- La URL debe de estar embebida "/embed/" para que funcione -->
+    <iframe width="700px" height="450px" [src]="video | domseguro:'https://youtube.com/embed/' "></iframe>
 </div>

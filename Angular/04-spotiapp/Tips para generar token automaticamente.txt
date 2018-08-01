@@ -1,0 +1,6 @@
+Código fuente:
+Pueden descargar el código fuente de la sección del material adjunto.
+
+Si tienen curiosidad de como hice el backend para obtener el token, puede descargar el código aquí
+
+https://github.com/Klerith/spotify-get-token
