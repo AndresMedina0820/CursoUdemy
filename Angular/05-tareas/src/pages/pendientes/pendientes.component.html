@@ -6,14 +6,11 @@
 
 <ion-content>
     <img src="../../assets/imgs/pendientes.jpg">
-    <ion-list>
-        <button ion-item *ngFor="let item of _tareas.tarea" (click)="tareaSeleccionada(item) ">
-          {{ item.titulo }}
-        </button>
-    </ion-list>
+
+    <app-tareas></app-tareas>
 
     <ion-fab right bottom>
-        <button ion-fab>
+        <button (click)="agregarTarea()" ion-fab>
             <ion-icon name="add"></ion-icon>
         </button>
     </ion-fab>

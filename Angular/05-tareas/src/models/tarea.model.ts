@@ -1,4 +1,4 @@
-import { TareaItem } from '../models/tarea-item.model';
+import { TareaItem } from './tarea-item.model';
 
 export class Tarea{
 

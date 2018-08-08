@@ -1,0 +1,26 @@
+<ion-list>
+    <ion-item-sliding #slidingItem *ngFor="let item of _tareas.tarea | filtroCompletado:terminada">
+
+        <ion-item-options side="left">
+            <button (click)="editarLista(item, slidingItem)" icon-only ion-button color="info">
+                <ion-icon name="create"></ion-icon>
+            </button>
+        </ion-item-options>
+
+        <button ion-item (click)="tareaSeleccionada(item) ">
+            {{ item.titulo }}
+                    
+            <ion-note item-end>
+                {{ item.items.length }} items
+            </ion-note>
+        </button>
+
+        <ion-item-options side="right">
+            <button (click)="BorrarLista(item)" icon-only ion-button color="danger">
+                <ion-icon name="close"></ion-icon>
+            </button>
+        </ion-item-options>
+
+    </ion-item-sliding>
+
+</ion-list>

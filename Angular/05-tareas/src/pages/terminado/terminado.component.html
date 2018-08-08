@@ -6,9 +6,7 @@
 
 <ion-content>
     <img src="../../assets/imgs/completados.jpg">
-    <ion-list>
-        <button ion-item *ngFor="let item of _tareas.tarea">
-              {{ item.titulo }}
-            </button>
-    </ion-list>
+
+    <app-tareas [terminada]='true'></app-tareas>
+
 </ion-content>

@@ -1,8 +1,34 @@
 <ion-header>
     <ion-navbar color="primary">
-        <ion-title>Lista sin nombre</ion-title>
+        <ion-title>{{ tarea.titulo }}</ion-title>
     </ion-navbar>
 </ion-header>
-
 <ion-content>
+    <ion-list>
+        <ion-list-header>
+            Tareas por hacer
+        </ion-list-header>
+        <ion-item>
+            <ion-label floating>Nueva Tarea</ion-label>
+            <ion-input [(ngModel)]="nombreItem" type="text" (keyup.enter)="agregarItem()"></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list *ngIf="tarea.items.length > 0">
+        <ion-list-header>
+            Tareas por hacer
+        </ion-list-header>
+        <ion-item-sliding *ngFor="let item of tarea.items; let i = index " class="animated fadeInDown">
+            <button ion-item detail-none (click)="actualizarTarea(item)"> 
+                <ion-icon *ngIf="!item.completado" name="square-outline" ion-start></ion-icon>
+                <ion-icon *ngIf="item.completado" name="checkbox-outline" ion-start></ion-icon>
+                    {{item.descripcion}}
+            </button>
+
+            <ion-item-options side="right">
+                <button (click)="Borrar(i)" icon-only ion-button color="danger">
+                    <ion-icon name="close"></ion-icon>
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
 </ion-content>

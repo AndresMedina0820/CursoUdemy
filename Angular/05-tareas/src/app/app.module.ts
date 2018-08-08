@@ -8,9 +8,13 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { PendientesPage } from '../pages/pendientes/pendientes.component';
 import { TerminadoPages } from '../pages/terminado/terminado.component';
 import { AgregarPage } from '../pages/agregar/agregar.component';
+import { TareasComponent } from '../components/tareas.component';
 
 //SERVICES
 import { TareasService } from '../services/tareas.service';
+
+//PIPES
+import { FiltroCompletadoPipe } from '../pipes/filtro-completado/filtro-completado'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -21,7 +25,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     PendientesPage,
     TerminadoPages,
-    AgregarPage
+    AgregarPage,
+    FiltroCompletadoPipe,
+    TareasComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     PendientesPage,
     TerminadoPages,
-    AgregarPage
+    AgregarPage,
+    TareasComponent
   ],
   providers: [
     StatusBar,
