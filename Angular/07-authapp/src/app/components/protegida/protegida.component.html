@@ -1,0 +1,22 @@
+<div class="row" *ngIf="profile">
+    <div class="col-md-4">
+        <img [src]="profile.picture" alt="" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <h3> {{profile.given_name}} {{profile.family_name}} | <small> {{profile.nickname}} </small></h3>
+            </li>
+            <li class="list-group-item">
+                <h4> {{ profile.updated_at | date: 'MMMM d y , h:mm a' }} </h4>
+            </li>
+            <li class="list-group-item">
+                <h4> {{ profile.gender | uppercase}} </h4>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<pre>
+  {{ profile | json }}
+</pre>
